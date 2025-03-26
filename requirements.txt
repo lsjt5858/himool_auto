@@ -1,0 +1,17 @@
+# 测试基础
+pytest==7.4.0
+requests==2.31.0
+
+# UI 自动化
+playwright==1.39.0
+pytest-playwright==0.4.0
+
+# 压测工具
+locust==2.20.0
+
+# 辅助工具
+Faker==19.13.0
+allure-pytest==2.13.2
+pytest-html==4.1.1
+pytest-xdist==3.5.0
+python-dotenv==1.0.0

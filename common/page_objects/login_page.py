@@ -115,4 +115,3 @@ class LoginPage(BasePage):
         except Exception as e:
             logger.error(f"获取错误消息失败: {str(e)}")
             return ""
-        """获取页面标题

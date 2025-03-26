@@ -93,3 +93,4 @@ class BasePage:
             text: 输入文本
             delay: 输入延迟（毫秒）
             timeout: 超时时间（毫秒）
+        """
