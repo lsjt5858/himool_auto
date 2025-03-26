@@ -102,4 +102,29 @@ def pytest_runtest_makereport(item, call):
         for name, value in item._fixtureinfo.name2fixturedefs.items():
             if name == "page" and hasattr(item, "funcargs") and "page" in item.funcargs:
                 page = item.funcargs["page"]
-                screenshot_dir
+                screenshot_dir = os.path.join(HTML_REPORT_DIR, "screenshots")
+                os.makedirs(screenshot_dir, exist_ok=True)
+                
+                # 生成截图文件名
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                test_name = item.nodeid.replace("/", "_").replace("::", "_")
+                screenshot_path = os.path.join(screenshot_dir, f"{test_name}_{timestamp}.png")
+                
+                # 截图
+                try:
+                    page.screenshot(path=screenshot_path)
+                    logger.info(f"测试失败截图已保存: {screenshot_path}")
+                    
+                    # 附加到Allure报告
+                    from common.allure_report import attach_screenshot
+                    attach_screenshot(page, f"失败截图_{test_name}")
+                except Exception as e:
+                    logger.error(f"截图失败: {str(e)}")
+                    
+                # 附加页面HTML到报告
+                try:
+                    from common.allure_report import attach_html
+                    html_content = page.content()
+                    attach_html(html_content, f"页面HTML_{test_name}")
+                except Exception as e:
+                    logger.error(f"附加HTML失败: {str(e)}")
