@@ -1,0 +1,6 @@
+[2025-03-26 19:55:19] [INFO] [conftest.py:45] - 使用默认用户登录
+[2025-03-26 19:55:19] [INFO] [api_client.py:155] - 发送 POST 请求: http://localhost:8081/user/login, json: {'number': '001', 'username': 'admin', 'password': 'Lx123456'}
+[2025-03-26 19:55:19] [INFO] [api_client.py:168] - 收到响应: 200, {'code': 0, 'data': {'name': '管理员', 'role': 'admin', 'token': 'mock_token_123456', 'username': 'admin'}, 'message': '登录成功'}
+[2025-03-26 19:55:19] [INFO] [api_client.py:50] - 登录成功，用户: admin
+[2025-03-26 19:55:19] [INFO] [api_client.py:155] - 发送 GET 请求: http://localhost:8081/user/info
+[2025-03-26 19:55:19] [INFO] [api_client.py:168] - 收到响应: 200, {'code': 0, 'data': {'name': '管理员', 'role': 'admin', 'username': 'admin'}, 'message': '获取用户信息成功'}
