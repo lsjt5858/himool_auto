@@ -1,0 +1,53 @@
+{
+    "users": [
+        {
+            "number": "001",
+            "username": "admin",
+            "password": "Lx123456",
+            "name": "管理员",
+            "role": "admin"
+        },
+        {
+            "number": "002",
+            "username": "test",
+            "password": "Test123456",
+            "name": "测试用户",
+            "role": "user"
+        }
+    ],
+    "api_endpoints": {
+        "login": "/user/login",
+        "logout": "/user/logout",
+        "user_info": "/user/info",
+        "user_list": "/user/list"
+    },
+    "test_cases": {
+        "login": {
+            "valid": {
+                "number": "001",
+                "username": "admin",
+                "password": "Lx123456"
+            },
+            "invalid_username": {
+                "number": "001",
+                "username": "wrong_user",
+                "password": "Lx123456"
+            },
+            "invalid_password": {
+                "number": "001",
+                "username": "admin",
+                "password": "wrong_password"
+            },
+            "empty_username": {
+                "number": "001",
+                "username": "",
+                "password": "Lx123456"
+            },
+            "empty_password": {
+                "number": "001",
+                "username": "admin",
+                "password": ""
+            }
+        }
+    }
+}
