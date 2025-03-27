@@ -136,3 +136,5 @@
 2025-03-27 14:15:25,896 - himool_auto_case - INFO - 登录成功，获取到token
 2025-03-27 14:15:38,382 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/user/get_token/
 2025-03-27 14:15:38,800 - himool_auto_case - INFO - 登录成功，获取到token
+2025-03-27 14:20:23,819 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/user/get_token/
+2025-03-27 14:20:24,209 - himool_auto_case - INFO - 登录成功，获取到token
