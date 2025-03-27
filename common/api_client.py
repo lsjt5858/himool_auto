@@ -124,13 +124,3 @@ if __name__ == "__main__":
     # 添加调试信息
     print("尝试登录...")
     token = api_client.login()
-    
-    if token:
-        print("登录成功，token:", token)
-        # 测试一个示例请求
-        print("\n测试GET请求...")
-        response = api_client.get("/api/v1/some-endpoint")
-        print("响应状态码:", response.status_code)
-        print("响应内容:", response.text)
-    else:
-        print("登录失败，请检查配置和网络连接")
