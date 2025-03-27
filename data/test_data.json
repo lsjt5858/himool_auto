@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "username": "test_user1",
+      "password": "password123",
+      "phone": "13800138001",
+      "email": "test_user1@example.com"
+    },
+    {
+      "username": "test_user2",
+      "password": "password123",
+      "phone": "13800138002",
+      "email": "test_user2@example.com"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "测试产品1",
+      "price": 99.99,
+      "description": "这是测试产品1的描述"
+    },
+    {
+      "id": 2,
+      "name": "测试产品2",
+      "price": 199.99,
+      "description": "这是测试产品2的描述"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD20230101001",
+      "user_id": 1,
+      "products": [1, 2],
+      "total_price": 299.98,
+      "status": "pending"
+    }
+  ]
+}

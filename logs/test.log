@@ -1,0 +1,132 @@
+2025-03-27 13:00:01,856 - himool_auto_case - INFO - 登录请求: http://localhost:8080/user/login
+2025-03-27 13:00:01,863 - himool_auto_case - ERROR - 登录失败: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /user/login</pre>
+</body>
+</html>
+
+2025-03-27 13:00:26,719 - himool_auto_case - INFO - 登录请求: http://localhost:8080/login
+2025-03-27 13:00:26,725 - himool_auto_case - ERROR - 登录失败: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /login</pre>
+</body>
+</html>
+
+2025-03-27 13:00:59,665 - himool_auto_case - INFO - 登录请求: http://localhost:8080/user/login
+2025-03-27 13:00:59,671 - himool_auto_case - ERROR - 登录失败: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /user/login</pre>
+</body>
+</html>
+
+2025-03-27 13:01:32,042 - himool_auto_case - INFO - 登录请求: http://localhost:8080/user/login
+2025-03-27 13:01:32,052 - himool_auto_case - ERROR - 登录失败: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /user/login</pre>
+</body>
+</html>
+
+2025-03-27 13:01:36,428 - himool_auto_case - INFO - 登录请求: http://localhost:8080/user/login
+2025-03-27 13:01:36,434 - himool_auto_case - ERROR - 登录失败: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /user/login</pre>
+</body>
+</html>
+
+2025-03-27 13:05:58,280 - himool_auto_case - INFO - 登录请求: http://localhost:8080/user/login
+2025-03-27 13:05:58,286 - himool_auto_case - ERROR - 登录失败: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /user/login</pre>
+</body>
+</html>
+
+2025-03-27 13:08:10,883 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/user/login
+2025-03-27 13:08:57,819 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/login
+2025-03-27 13:21:07,543 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/login
+2025-03-27 13:21:12,446 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/v1/login
+2025-03-27 13:21:16,879 - himool_auto_case - INFO - 登录请求: http://localhost:8080/login
+2025-03-27 13:21:16,884 - himool_auto_case - ERROR - 登录失败: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /login</pre>
+</body>
+</html>
+
+2025-03-27 13:21:17,884 - himool_auto_case - INFO - 登录请求: http://localhost:8080/user/login
+2025-03-27 13:21:17,887 - himool_auto_case - ERROR - 登录失败: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /user/login</pre>
+</body>
+</html>
+
+2025-03-27 13:21:18,892 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/user/login
+2025-03-27 13:30:24,863 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/v1/login
+2025-03-27 13:35:12,374 - himool_auto_case - INFO - 登录请求: http://localhost:8080/user/login
+2025-03-27 13:35:12,380 - himool_auto_case - ERROR - 登录失败: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /user/login</pre>
+</body>
+</html>
+
+2025-03-27 13:40:58,697 - himool_auto_case - INFO - 登录请求: http://localhost:8080/user/login
+2025-03-27 13:40:58,702 - himool_auto_case - ERROR - 登录失败: 404 - <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot POST /user/login</pre>
+</body>
+</html>
+
+2025-03-27 14:03:19,771 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/user/get_token/
+2025-03-27 14:03:19,974 - himool_auto_case - INFO - 登录成功，获取到token
+2025-03-27 14:08:49,524 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/user/get_token/
+2025-03-27 14:08:49,728 - himool_auto_case - INFO - 登录成功，获取到token
+2025-03-27 14:09:20,440 - himool_auto_case - INFO - 登录请求: http://localhost:8080/api/user/get_token/
+2025-03-27 14:09:20,852 - himool_auto_case - INFO - 登录成功，获取到token
