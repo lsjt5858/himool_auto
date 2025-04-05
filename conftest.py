@@ -17,6 +17,7 @@ def ensure_dir_exists(dir_path):
     if not os.path.exists(dir_path):
         os.makedirs(dir_path)
 
+
 ensure_dir_exists(HTML_REPORT_DIR)
 ensure_dir_exists(ALLURE_REPORT_DIR)
 
