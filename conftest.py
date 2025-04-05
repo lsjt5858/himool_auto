@@ -1,94 +1,54 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Description: Pytest 全局 Fixture 配置
+
 import os
 import pytest
-import allure
 from datetime import datetime
-from playwright.sync_api import sync_playwright
-from common.logger import get_logger
-from common.api_client import APIClient
-from common.allure_report import set_allure_environment, attach_screenshot
-from config.settings import UI_URL, UI_TIMEOUT
+import pytest_html
 
-logger = get_logger()
+# 配置报告目录
+REPORT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'reports')
+HTML_REPORT_DIR = os.path.join(REPORT_DIR, 'html_report')
+ALLURE_REPORT_DIR = os.path.join(REPORT_DIR, 'allure_report')
 
-# 设置Allure环境变量
-set_allure_environment()
+# 确保报告目录存在
+def ensure_dir_exists(dir_path):
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
 
-@pytest.fixture(scope="session")
-def api_client():
-    """API客户端，会话级别"""
-    logger.info("创建API客户端")
-    client = APIClient()
-    yield client
-    logger.info("关闭API客户端")
+ensure_dir_exists(HTML_REPORT_DIR)
+ensure_dir_exists(ALLURE_REPORT_DIR)
 
-@pytest.fixture(scope="session")
-def playwright():
-    """Playwright实例，会话级别"""
-    logger.info("启动Playwright")
-    pw = sync_playwright().start()
-    yield pw
-    logger.info("关闭Playwright")
-    pw.stop()
+# 配置HTML报告元数据
+def pytest_configure(config):
+    # 新版pytest中使用不同的方式设置元数据
+    metadata = getattr(config, '_metadata', {})
+    metadata['项目名称'] = 'Himool自动化测试'
+    metadata['测试环境'] = 'localhost'
+    metadata['执行时间'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-@pytest.fixture(scope="function")
-def browser(playwright):
-    """浏览器实例，函数级别"""
-    logger.info("创建浏览器实例")
-    browser = playwright.chromium.launch(headless=True)
-    yield browser
-    logger.info("关闭浏览器实例")
-    browser.close()
+# 自定义HTML报告样式
+def pytest_html_report_title(report):
+    report.title = "Himool自动化测试报告"
 
-@pytest.fixture(scope="function")
-def page(browser):
-    """页面实例，函数级别"""
-    logger.info("创建页面实例")
-    page = browser.new_page(viewport={"width": 1920, "height": 1080})
-    page.set_default_timeout(UI_TIMEOUT)
-    yield page
-    logger.info("关闭页面实例")
-    page.close()
+# 修改HTML报告中的环境信息表格
+def pytest_html_results_table_header(cells):
+    cells.insert(1, '<th>描述</th>')
+    cells.pop()
 
-@pytest.fixture(scope="function")
-def logged_in_page(page):
-    """已登录的页面实例，函数级别"""
-    logger.info("创建已登录的页面实例")
-    # 导航到登录页
-    page.goto(f"{UI_URL}/login")
-    
-    # 执行登录
-    page.fill("#username", "test_user")
-    page.fill("#password", "password123")
-    page.click("#login-button")
-    
-    # 等待登录成功
-    page.wait_for_url(f"{UI_URL}/home")
-    
-    yield page
+def pytest_html_results_table_row(report, cells):
+    cells.insert(1, f'<td>{report.description}</td>')
+    cells.pop()
 
-@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+@pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-    """测试结果钩子，用于失败截图"""
     outcome = yield
     report = outcome.get_result()
-    
-    # 如果是UI测试且测试失败，进行截图
-    if "page" in item.funcargs and report.when == "call" and report.failed:
-        page = item.funcargs["page"]
-        screenshot_dir = "reports/screenshots"
-        os.makedirs(screenshot_dir, exist_ok=True)
-        
-        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-        screenshot_path = f"{screenshot_dir}/failure_{item.name}_{timestamp}.png"
-        
-        # 截图并添加到Allure报告
-        try:
-            page.screenshot(path=screenshot_path)
-            allure.attach.file(
-                screenshot_path,
-                name=f"Failure Screenshot: {item.name}",
-                attachment_type=allure.attachment_type.PNG
-            )
-            logger.info(f"测试失败截图保存到: {screenshot_path}")
-        except Exception as e:
-            logger.error(f"截图失败: {e}")
+    report.description = str(item.function.__doc__)
+
+# 测试会话结束后的处理
+def pytest_sessionfinish(session, exitstatus):
+    print(f"\n测试执行完成，退出状态: {exitstatus}")
+    print(f"HTML报告路径: {HTML_REPORT_DIR}")
+    print(f"Allure报告路径: {ALLURE_REPORT_DIR}")

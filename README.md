@@ -1,15 +1,3 @@
-# 自动化测试框架设计文档
-
-## 技术栈
-- **语言**: Python 3.8+
-- **HTTP 请求库**: Requests
-- **测试框架**: Pytest
-- **UI 自动化**: Playwright
-- **压测工具**: Locust（轻量级压测库，需独立安装）
-
----
-
-
 ## 框架目录结构
 ```plaintext
 project_root/
@@ -39,4 +27,4 @@ project_root/
 ├── conftest.py               # Pytest 全局 Fixture
 ├── pytest.ini                # Pytest 配置文件
 ├── requirements.txt          # 依赖库清单
-└── README.md                 # 框架使用说明
+└── README.md                 # 框架使用说明 
