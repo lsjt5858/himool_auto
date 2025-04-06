@@ -1,0 +1,1 @@
+{"username":"testuser_1743","name":"测试用户_1743","phone":"13800131743","email":"test@example.com","sex":"man","roles":[1],"is_active":true,"id":108,"sex_display":"男","is_manager":false,"role_items":[{"id":1,"name":"系统管理"}],"permissions":[],"create_time":"2025-04-06 23:29:12"}

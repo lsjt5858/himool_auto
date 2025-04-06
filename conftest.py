@@ -6,6 +6,7 @@ import os
 import pytest
 from datetime import datetime
 import pytest_html
+from common.api_client import ApiClient
 
 # 配置报告目录
 REPORT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'reports')
@@ -47,6 +48,20 @@ def pytest_runtest_makereport(item, call):
     outcome = yield
     report = outcome.get_result()
     report.description = str(item.function.__doc__)
+
+# API客户端session级别fixture
+@pytest.fixture(scope="session")
+def api_client():
+    """
+    创建API客户端并登录，整个测试会话共享同一个客户端实例和登录token
+    """
+    client = ApiClient(base_url="http://localhost:8080")
+    # 登录系统获取token
+    response = client.login(username="admin", password="Lx123456", number="001")
+    assert response.status_code == 200, "登录失败，无法获取token"
+    assert client.access_token, "登录成功但未获取到access token"
+    
+    return client
 
 # 测试会话结束后的处理
 def pytest_sessionfinish(session, exitstatus):

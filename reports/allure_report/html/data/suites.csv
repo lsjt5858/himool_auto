@@ -2,3 +2,12 @@
 "
         测试登录API接口
         ","208","测试登录接口","test_cases.api","Sat Apr 05 21:57:54 CST 2025","passed","Sat Apr 05 21:57:54 CST 2025","TestLogin","test_login","",""
+"
+        测试添加用户API接口
+        ","208","测试添加用户接口","test_cases.api.system_manager.users","Sun Apr 06 23:20:01 CST 2025","passed","Sun Apr 06 23:20:01 CST 2025","TestUserManagement","test_user_management","",""
+"
+        测试添加用户API接口
+        ","201","测试添加用户接口","test_cases.api.system_manager.users","Sun Apr 06 23:35:25 CST 2025","passed","Sun Apr 06 23:35:25 CST 2025","TestUserManagement","test_add_user_management","",""
+"
+        测试登录API接口
+        ","201","测试登录接口","test_cases.api.login","Sun Apr 06 23:35:24 CST 2025","passed","Sun Apr 06 23:35:24 CST 2025","TestLogin","test_login","",""

@@ -204,7 +204,7 @@ allure.api.addTranslation('sv', {
     },
     widget: {
         behaviors: {
-            name: 'Funktioner efter users stories',
+            name: 'Funktioner efter user stories',
             showAll: 'visa allt'
         }
     }

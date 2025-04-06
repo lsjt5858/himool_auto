@@ -1,0 +1,4 @@
+[32mINFO    [0m himool_auto_case:api_client.py:46 登录系统: http://localhost:8080/api/user/get_token/
+[32mINFO    [0m himool_auto_case:api_client.py:56 登录成功，已获取token
+[32mINFO    [0m himool_auto_case:api_client.py:95 POST请求: http://localhost:8080/api/users/
+[32mINFO    [0m himool_auto_case:api_client.py:144 响应状态码: 201

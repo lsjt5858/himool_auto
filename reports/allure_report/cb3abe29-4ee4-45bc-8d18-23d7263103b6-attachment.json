@@ -1,0 +1,11 @@
+{
+  "username": "testuser_5931",
+  "name": "测试用户_5931",
+  "phone": "1380013_5931",
+  "email": "test@example.com",
+  "sex": "man",
+  "roles": [
+    1
+  ],
+  "is_active": true
+}
