@@ -48,7 +48,7 @@ class TestLogin:
             assert "refresh" in resp_data, "响应中没有refresh token字段"
             assert resp_data.get("access"), "access token值为空"
             assert resp_data.get("refresh"), "refresh token值为空"
-            
+
         # 输出token信息
         with allure.step("获取token信息"):
             access_token = resp_data.get("access")
@@ -57,3 +57,4 @@ class TestLogin:
             allure.attach(refresh_token, "获取到的refresh token", allure.attachment_type.TEXT)
             
         return access_token
+
