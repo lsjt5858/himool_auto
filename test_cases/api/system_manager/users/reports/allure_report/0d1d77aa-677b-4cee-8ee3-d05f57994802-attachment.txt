@@ -1,0 +1,4 @@
+INFO     himool_auto_case:api_client.py:34 API客户端初始化完成，base_url: http://test-api.example.com/api
+INFO     himool_auto_case:test_add_user.py:34 开始测试添加用户接口，测试数据: {'username': 'testuser9276', 'name': '测试用户9276', 'phone': '13800009276', 'email': 'test9276@example.com', 'sex': 'man', 'roles': [1], 'is_active': True}
+INFO     himool_auto_case:api_client.py:54 API请求: POST http://localhost:8080/api/users
+INFO     himool_auto_case:api_client.py:71 API响应: 500 Internal Server Error

@@ -1,0 +1,6 @@
+[2025-04-06 22:23:06,558] [INFO] [api_client.py:34] - API客户端初始化完成，base_url: http://test-api.example.com/api
+[2025-04-06 22:23:06,559] [INFO] [test_add_user.py:34] - 开始测试添加用户接口，测试数据: {'username': 'testuser5652', 'name': '测试用户5652', 'phone': '13800005652', 'email': 'test5652@example.com', 'sex': 'man', 'roles': [1], 'is_active': True}
+[2025-04-06 22:23:06,559] [INFO] [api_client.py:54] - API请求: POST http://localhost:8081/api/users
+[2025-04-06 22:23:06,569] [INFO] [api_client.py:71] - API响应: 201 CREATED
+[2025-04-06 22:23:06,570] [INFO] [test_add_user.py:48] - 添加用户成功，响应数据: {'created_at': '2025-04-06 22:23:06', 'email': 'test5652@example.com', 'id': 1, 'is_active': True, 'name': '测试用户5652', 'phone': '13800005652', 'roles': [1], 'sex': 'man', 'username': 'testuser5652'}
+[2025-04-06 22:23:06,570] [INFO] [test_add_user.py:61] - 添加用户接口测试完成

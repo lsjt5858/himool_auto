@@ -1,0 +1,5 @@
+[32mINFO    [0m himool_auto_case:api_client.py:34 API客户端初始化完成，base_url: http://test-api.example.com/api
+[32mINFO    [0m himool_auto_case:conftest.py:124 获取认证token
+[32mINFO    [0m himool_auto_case:test_add_user.py:39 开始测试添加用户接口，测试数据: {'username': 'testuser3615', 'name': '测试用户3615', 'phone': '13800003615', 'email': 'test3615@example.com', 'sex': 'man', 'roles': [1], 'is_active': True}
+[32mINFO    [0m himool_auto_case:api_client.py:54 API请求: POST http://test-api.example.com/api/api/users
+[32mINFO    [0m himool_auto_case:api_client.py:71 API响应: 502 Bad Gateway

@@ -1,0 +1,4 @@
+[32mINFO    [0m himool_auto_case:api_client.py:34 API客户端初始化完成，base_url: http://test-api.example.com/api
+[32mINFO    [0m himool_auto_case:test_add_user.py:45 开始测试添加用户接口，测试数据: {'username': 'testuser6152', 'name': '测试用户6152', 'phone': '13800006152', 'email': 'test6152@example.com', 'sex': 'man', 'roles': [1], 'is_active': True}
+[32mINFO    [0m himool_auto_case:test_add_user.py:48 获取登录token
+[32mINFO    [0m himool_auto_case:test_add_user.py:51 成功获取token: eyJhbGciOi...

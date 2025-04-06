@@ -1,0 +1,4 @@
+[2025-04-06 22:20:30,173] [INFO] [api_client.py:34] - API客户端初始化完成，base_url: http://test-api.example.com/api
+[2025-04-06 22:20:30,174] [INFO] [test_add_user.py:34] - 开始测试添加用户接口，测试数据: {'username': 'testuser4665', 'name': '测试用户4665', 'phone': '13800004665', 'email': 'test4665@example.com', 'sex': 'man', 'roles': [1], 'is_active': True}
+[2025-04-06 22:20:30,174] [INFO] [api_client.py:54] - API请求: POST http://test-api.example.com/api/api/users
+[2025-04-06 22:20:33,934] [INFO] [api_client.py:71] - API响应: 502 Bad Gateway

@@ -1,0 +1,6 @@
+[2025-04-06 22:57:00,446] [INFO] [api_client.py:34] - API客户端初始化完成，base_url: http://test-api.example.com/api
+[2025-04-06 22:57:00,447] [INFO] [test_add_user.py:45] - 开始测试添加用户接口，测试数据: {'username': 'testuser9851', 'name': '测试用户9851', 'phone': '13800009851', 'email': 'test9851@example.com', 'sex': 'man', 'roles': [1], 'is_active': True}
+[2025-04-06 22:57:00,447] [INFO] [test_add_user.py:48] - 获取登录token
+[2025-04-06 22:57:00,665] [INFO] [test_add_user.py:51] - 成功获取token: eyJhbGciOi...
+[2025-04-06 22:57:00,665] [INFO] [api_client.py:54] - API请求: POST http://localhost:8080/api/users
+[2025-04-06 22:57:00,720] [INFO] [api_client.py:71] - API响应: 500 Internal Server Error

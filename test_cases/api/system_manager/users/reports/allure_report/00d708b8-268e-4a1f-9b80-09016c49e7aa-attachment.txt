@@ -1,0 +1,1 @@
+INFO     himool_auto_case:api_client.py:34 API客户端初始化完成，base_url: http://test-api.example.com/api
